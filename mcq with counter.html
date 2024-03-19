@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  let counter = 0;
+  $("button.showAnswer").click(function(){
+    var answer = $(this).parent().find("div.mcqsAnswer").removeClass("show");
+  })
+  $("label").click(function(){
+    $(this).parent().addClass("disabled");
+    var id = $(this).attr('id');
+    var correct = $(this).parent().find('div#correctoption').html();
+    if(id === correct) {
+   //   $(this).parent().find('label').removeClass("correct incorrect");
+      $(this).find('p').addClass("correct");
+      counter++;
+    }
+    else {
+  //    $(this).parent().find('label').removeClass("correct incorrect");
+      $(this).find('p').addClass("incorrect");
+    }
+  //  $(this).parent().addClass("disabled");
+    $("div.marks").html(counter);
+  });
+  $("button#finish").click(function(){
+    alert("Your got" counter/2);
+  });
+});
+</script>
+<style type="text/css">
+   body {
+    background-color: lightcyan;
+    width: 60%;
+    margin-left: 20%;
+    padding: 20px;
+    font-family: Century Gothic;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+   }
+   label {
+    font-size: 20px;
+    min-width: 500px;
+   }
+   .disabled {
+    pointer-events: none;
+   }
+  .correct {
+    background-color: limegreen;
+    color: white;
+    border-radius: 10px;
+  }
+  .mcqs h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .incorrect {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+  }
+  #correctoption {
+    display: none;
+  }
+  .mcqs label p {
+    display: inline-block;
+    margin:  3px 0;
+    padding: 5px;
+    width: 60%;
+    border-radius: 10px 0 10px 0;
+    border: 1px solid green;
+  }
+  .mcqs label p:hover {
+    background-color: blueviolet;
+    color: antiquewhite;
+  }
+  .marks {
+    position: fixed;
+    right:  10%;
+    top:  20px;
+    box-shadow: border-box;
+    font-size: 20px;
+    border:  2px solid greenyellow dotted;
+    z-index: 2;
+    background-color: limegreen;
+    padding: 20px;
+  }
+  .circle {
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  .showAnswer {
+    float:  right;
+    display: block;
+    font-weight: 600;
+  }
+  .showAnswer:after {
+    clear:  both;
+  }
+</style>
+</head>
+<body>
+  <div class="marks">0</div>
+<h1 align="center">Multiple Choice Questions in HTML, CSS and JS</h1>
+<hr>
+<ol class="mcqs">
+  <li>
+    <div class="mcqs">
+  <h2>The dimensions of Impulse is similar to that of</h2>
+    <label id="opt1">
+      <p>a) Force</p>
+    </label>
+    <br>
+    <label id="opt2">
+      <p>b) Linear Momentum</p>
+    </label>
+    <br>
+    <label id="opt3">
+      <p>c) Pressure</p>
+    </label>
+    <br>
+    <label id="opt4">
+      <p>d) Angular Momentum</p>
+    </label>
+    <div id="correctoption">opt2</div>
+</div>
+    <div class="showAnswer">See Answer</div>
+  </li>
+  <hr>
+  <li>
+    <div id="mcq-2" class="mcqs">
+  <h2>1 torr is equal to</h2>
+    <label id="opt1">
+      
+      <p>a) 1 atm</p>
+    </label>
+    <br>
+    <label id="opt2">
+      
+      <p>b) 1 bar</p>
+    </label>
+    <br>
+    <label id="opt3">
+      
+      <p>c) 1 mm of Hg</p>
+    </label>
+    <br>
+    <label id="opt4">
+      
+      <p>d) None</p>
+    </label>
+    <div id="correctoption">opt3</div>
+</div>
+  </li>
+  <hr>
+  <li>
+    <div class="mcqs">
+  <h2>A perfect black body is</h2>
+    <label id="opt1">
+      <span class="circle"></span>
+      <p>a) A perfect emitter</p>
+    </label>
+    <br>
+    <label id="opt2">
+      
+      <p>b) A perfect absorber</p>
+    </label>
+    <br>
+    <label id="opt3">
+      
+      <p>c) None</p>
+    </label>
+    <br>
+    <label id="opt4">
+      
+      <p>d) Both</p>
+    </label>
+    <div id="correctoption">opt4</div>
+</div>
+  </li>
+</ol>
+
+
+<div class="mcqs">
+  <h2>If the length of the side of a square is a then what is the length of the diagonal of the squae?</h2>
+    <label id="opt1">
+      <span class="circle"></span>
+      <p>a) a \sqrt{2}</p>
+    </label>
+    <br>
+    <label id="opt2">
+      
+      <p>b) a^2</p>
+    </label>
+    <br>
+    <label id="opt3">
+      
+      <p>c) 2a</p>
+    </label>
+    <br>
+    <label id="opt4">
+      
+      <p>d) a/2</p>
+    </label>
+    <div id="correctoption">opt1</div>
+</div>
+
+
+<button id="finish">Finish</button>
+
+
+</body>
+</html>

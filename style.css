@@ -1,0 +1,169 @@
+@media only screen and (max-width: 600px) {
+
+	body {
+		
+	}
+
+	nav {
+	}
+
+	header {
+
+	}
+
+	.site-header {
+		padding:  0 5%;
+	}
+
+	#sandwich {
+		display: block;
+		float:  right;
+	}
+	#site-logo {
+		transform: scale(0.9);
+	}
+
+	nav#header-menu {
+		display: none;
+		z-index:  3;
+		float: right;
+		margin-top: 70px;
+	}
+
+	nav#header-menu a {
+		display: block;
+		text-align: center;
+	}
+
+	nav#header-menu a:hover {
+		background-color: var(--font-color);
+		color: var(--main-color);
+	}
+
+	/*
+
+	button.submit {
+		border-radius: 10px;
+		height: 50px;
+		font-size: 18px;
+		width: 100px;
+		border: none;
+		color: var(--head-color);
+		background-color: var(--main-color);
+		transition: 0.4s ease;
+	}
+
+	button.submit:hover {
+		background-color:  var(--color);
+	} */
+
+	/*Hero*/
+
+	.hero {
+		height: 150px;
+		color: var(--head-color);
+	}
+
+	#hero-title {
+		font-size: 40px;
+		padding-top: 30px;
+	}
+
+	.upcoming-events {
+		width: 80%;
+		margin:  20px 0;
+		margin-left:  10%;
+		height: auto;
+	}
+
+	.main-sidebar {
+		width: 80%;
+		margin-left: 10%;
+		float: none;
+	}
+	.event-month {
+	}
+
+	.event-card {
+	}
+
+	.event-card:hover {
+	}
+
+	.event-card:hover .event-title {
+	}
+
+	.event-date {
+	}
+
+	.event-title {
+	}
+
+	.event-organizer, .event-venue, .event-description {
+	}
+
+	 {
+
+	}
+
+	 {
+
+	}
+
+
+	.bubble {
+		display: block;
+		padding: 8px;
+		margin: 2px;
+		border: 1px dotted var(--font-color);
+		border-radius: 5px;
+		color: var(--main-color);
+		background-color: var(--primary-color);
+	}
+
+	.bubble:hover {
+		cursor: pointer;
+		border-style: dashed;
+		color: var(--font-color);
+		background-color: transparent;
+	}
+
+	/*Footer*/
+
+	footer {
+		height: 90px;
+		width: 100%;
+		margin-top: 20px;
+		line-height: 30px;
+		color: var(--font-color);
+		background-color: var(--color);
+		text-align: center;
+	}
+
+	nav#footer-menu {
+		padding: 10px 0;
+	}
+
+	nav#footer-menu a{
+		padding: 0px 10px;
+	}
+
+	/* Social Handles 
+	#facebook {
+		background-color:  blue;
+	}
+
+	#youtube {
+		background-color: red;
+	}
+
+	#pinterest {
+		background-color:  maroon;
+	}
+
+	*/
+	.single-post {
+		width: 90%;
+		margin-left: 5%;
+	}
+}

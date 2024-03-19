@@ -1,0 +1,2754 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+/*
+
+$(document).ready(function(){
+  $("label").click(function(){
+    var id = $(this).attr('id');
+    var correct = $(this).parent().find('div#correctoption').html();
+      $(this).parent().addClass("disabled");
+    console.log(correct);
+    if(id === correct) {
+      $(this).addClass("correct");
+    }
+    else {
+      $(this).addClass("incorrect");
+    }
+  });
+}); */
+$(document).ready(function(){
+	var marks = 0;
+  $("label").click(function(){
+    $(this).parent().addClass("disabled");
+    var id = $(this).attr('id');
+    var correct = $(this).parent().find('div#correctoption').html();
+    if(id === correct) {
+      $(this).addClass("correct");
+      marks++;
+    }
+    else {
+      $(this).addClass("incorrect");
+    }
+    value = $("#myMeter").val();
+    value++;
+    $("#myMeter").val(value); 
+   //  $(document).scrollTop($(this).parent().next().offset().top-100,2000) 
+$('html, body').animate({
+    scrollTop: $(this).parent().next().offset().top-100}, 500);
+   });
+$(window).scroll(function() 
+{
+ if ($(this).scrollTop() > 100)
+ {
+  $('#myMeter').addClass("sticky_header");
+ }
+ else
+ {
+  $('#myMeter').removeClass("sticky_header");
+ }
+});
+
+});
+</script>
+<style type="text/css">
+
+   body {
+    background-color: black;
+    color: white;
+   }
+   a {
+   	text-decoration: none;
+   	color:  inherit;
+   }
+   label {
+    font-size: 16px;
+    min-width: 500px;
+   }
+  .correct {
+    border: 1px solid limegreen;
+    border-radius: 10px;
+  }
+  html {
+  	scroll-behavior: smooth;
+  }
+  .incorrect {
+    border: 1px solid red;
+  	border-radius: 10px;
+  }
+  #correctoption {
+    display: none;
+  }
+  .disabled {
+   pointer-events: none;
+}
+.mcqs label p {
+    display: inline-block;
+
+  }
+  .mcqs label {
+  	display: block;
+  }
+  .mcqs-questions {
+  	width: 40%;
+  	margin-left: 30%;
+  }
+  .showAnswer {
+  	width: 100%;
+  	text-align: right;
+  }
+  .mcqs h2 {
+  	font-size: 16px;
+  	font-weight: 600;
+  }
+/* .hidden {
+  	display: none;
+  }*/
+  #myMeter {
+  	width: 40%;
+		box-sizing: border-box;  	
+  }
+  .sticky_header {
+
+  	position: fixed;
+		top:  100;
+  }
+
+</style>
+</head>
+
+<body>
+	<div class="mcqs-questions">
+	<meter id="myMeter" max="200" value="0"></meter>
+	<div class="mcqs" id="mcq-1">
+	 <h2>The dimensions of Impulse is similar to that of</h2>
+	    <label id="opt1">
+	      <input type="radio">
+  			<span class="option-box"></span>
+	      <p>Force</p>
+	    </label>
+	    <label id="opt2">
+	    	<input type="radio">
+  			<span class="option-box"></span>
+	      <p>Linear Momentum</p>
+	    </label>
+	    <label id="opt3">
+	    	<input type="radio">
+  			<span class="option-box"></span>
+	      <p>Pressure</p>
+	    </label>
+	    <label id="opt4">
+	    	<input type="radio">
+  			<span class="option-box"></span>
+	      <p>Angular Momentum</p>
+	    </label>
+	    <div id="correctoption">opt2</div>
+	</div>
+	<div class="showAnswer"><span><a href="https://www.scipitutor.com/ask/the-dimensions-of-impulse-is-similar-to-that-of-28209/">Explanation</a></span></div>
+
+
+<hr>
+<div class="mcqs" id="mcq-2">
+	<h2>A force	of 20N acts on a particle of mass 2 Kg and displaces it by 5m at and angle of 30o. What is the work done?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>40 J</p>
+	</label>
+	    
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>50 J</p>
+	</label>	
+	    
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>100 J</p>
+	</label>	
+	    
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>50 root 3 J</p>
+	</label>	
+	    
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+
+
+<div class="mcqs" id="mcq-3">
+	<h2>An athlete runs some distance before taking a long jump because:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>It helps to apply large force</p>
+	</label>	
+	    
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>By running action and reaction force increases</p>
+	</label>
+	  
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>He gains energy to take him through long distance</p>
+	</label>	
+	  
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>By running the athelete gives himself larger inertia of motion</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-4">
+	<h2>If the radius of earth were to decrease by 1%, its mass remaining the same, the acceleration due to gravity on the surface of earth will:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increase by 1%</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Decrease by 1%</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Decrease by 2%</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increase by 2%</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-5">
+	<h2>The time period of a simple pendulum is doubled if</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Its length is doubled</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mass of the bob is doubled</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Its length is made four times</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mass of bob is doubled and length of pendulum is also doubled</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-6">
+	<h2>A boat having a length 3m and breadth 2m is floating on a lake. The boat skinks by 1cm when a man gets on it. The mass of the man is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>60 Kg</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>72 Kg</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>12 Kg</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>128 Kg</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-7">
+	<h2>The correct value of 0oC on the Kelvin scale is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>273.15 K</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>272.85 K</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>273 K</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>273.2 K</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-8">
+	<h2>A solid ball of metal has a concentric spherical cavity within it. If the ball is heated, the volume of the cavity will:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increase</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Decrease</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Remains unaffected</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>None of the above</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-9">
+	<h2>Two blocks of ice when pressed together join to form one block because:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Of heat produced during pressing</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Of cold produced during pressing</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Melting point of ice decrease with increase in pressure</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Melting point of ice increase with increase in pressure</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-10">
+	<h2>The ratio of the speed of a body to the speed of sound is called</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Sonic index</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Doppler ratio</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mach number</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Refractive index</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-11">
+	<h2>A person approaches a plane mirror with velocity V. Then relative velocity of approach of person and his image is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>V/2</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>V</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2V</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Zero</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-12">
+	<h2>An air bubble in the slab (mu = 1.5) appears 6cm from one side and 4cm from the other side. The real thickness of the glass slab is:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>10 cm</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>6.67 cm</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>15 cm</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Cannot be estimated</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer" id="mcq-13">Explanation</div>
+<hr>
+<div class="mcqs">
+	<h2>The length and radius of a wire are l and r respectively. Its resistance is R. After hammering the radius of the wire is made r/2. The new resistance will be</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>R/4</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>R</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4R</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>16R</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-14">
+	<h2>The group of small pieces of rock revolving round the sun between the orbits of Mars and Jupiter are called</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Meteors</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Comets</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Meteorites</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Asteroids</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-15">
+	<h2>Proton (p), neutron (n) and electron (e) are the fundamental particles of an atom. The correct order of their mass is:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>p > n > e</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>e > n > p</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>n > p < e</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>e < p < n</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-16">
+	<h2>Which of the following postulates is not according to Dalton's atomic theory?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Atom can neither be created nor be destroyed</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Matters are made up of indiviudal particles called atoms</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>The mass of an atom can be changed into energy</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Atoms of same substance are identical</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-17">
+	<h2>The maximum number of electrons is in:</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>71 gm Chlorine</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>98 gm Magnesium</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>127 gm Iodine</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4 gm Hydrogen</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-18">
+	<h2><table>
+		<tr>
+			<td>(A) Electron</td><td>(i) No charge and unit mass</td>
+		</tr>
+		<tr>
+			<td>(B) Neutron</td><td>(ii) Unit negative charge and unit mass</td>
+		</tr>
+		<tr>
+			<td>(C) Proton</td><td>(iii) Unit negative charge and negligible mass</td>
+		</tr>
+		<tr>
+			<td>(D) Positron</td><td>Unit positive charge and unit mass</td>
+		</tr>
+		<tr>
+			<td>(E) Antiproton</td><td>Unit positive charge and negligible mass</td>
+		</tr>
+	</table></h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A (ii), B(iv), C(v), D(ii) and E(i)</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A(iii), B(v), C(i), D(iv) and E(ii)</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A(ii), B(i), C(v), D(iv) and E(iii)</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A(iii), B(i), C(iv), D(v), E(ii)</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-19">
+	<h2>The C - C bond length is the shortest in</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C2H6</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C6H6</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C2H5Cl</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C2H4</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-20">
+	<h2>A catalyst</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increases the average kinetic energy of molecules</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increases activation energy</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Decreases activation energy</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Increases the frequency of collisions of reacting species</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr><div class="mcqs" id="mcq-21">
+	<h2>The molecular formula of Bone ash is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Ca3(PO4)2</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C6H12O6</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Na2CO3</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>CaSO4</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-22">
+	<h2>Chemical reaction which proceeds in both forward and backward directions is called a / an</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Substitution reaction</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Double decmoposition reaction</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Irreversible reaction</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Reversible reaction</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-23">
+	<h2>An aqueous solution of CuSO4 is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Acidic</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Basic</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Neutral</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Amphoteric</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-24">
+	<h2>The first attempt to classify elements was made by</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mendeleev</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Loather Meyer</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Newland</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Dobreneir</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-25">
+	<h2>Copper pyrite is an ore of</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Ag</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Fe</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mg</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hg</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-26">
+	<h2>Pure nascent hybrodgen is best obtained by</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Na and C2H5OH</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Zn and dil.H2SO4</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Al and NaOH</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>All of these</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-27">
+	<h2>Gobar gas mainly contains</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Ethane</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Methane</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Propane</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Butane</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-28">
+	<h2>"A tube within a tube body plan" is met within</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hydra</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Planaria</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Ascaris</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Fasciola</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-29">
+	<h2>Which of these derives most of its water requirements from metabolism and does not drink water?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Kangaroo rat</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Marine fish</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Kangaroo</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Penguin</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-30">
+	<h2>Which of the following is NOT related with Sexual reproduction in protozoans?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Conjugation</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Schizogony</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Cytogamy</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Autogamy</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-31">
+	<h2>The common name of <i>Octopus</i> is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Devil fish</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Cuttle fish</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Squid</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>None of these</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-32">
+	<h2>Radial symmetry is often exhibited by</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Echinoderms</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Coelenterates</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Both a and b</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>None of the above</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-33">
+	<h2>Rabies is a ___ disease.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Bacterial</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Fungal</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Viral</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>None of these</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-34">
+	<h2>Introduction of <i>Gambusia Fish</i> in a pond to control mosquitoes, is an example of</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mechanical control</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Biological control</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Systemic control</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>None</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-35">
+	<h2>The application of genetic principles for the improvement of mankind is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Genetic engineering</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Biotechnology</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Eugenics</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Anthropology</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-36">
+	<h2>Ligaments join</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Muscle to muscle</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Muscle to bone</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Bone to bone</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Cartilage to bone</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-37">
+	<h2>Choose the false statement.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Wall of veins is thinner than that of artery.</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Pulmonary artery carries deoxygenated blood.</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Veins are provided with valves.</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Arteries are provided with valves.</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-38">
+	<h2>"Protoplasm is physical basis of life" said by</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>J. Huxley</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Watson</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Schwann</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Mendel</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-39">
+	<h2>Father of Genetics is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>G. Mendel</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Carolous Linneaus</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Bateson</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Aristotle</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-40">
+	<h2>Structure for motility in bacteria is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Pili</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Flagella</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Fimbriae</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Both (a) and (c)</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-41">
+	<h2>Spirogyra is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Pond silk</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Water scum</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Green algae</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>All of the above</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-42">
+	<h2>Circinate vernation in fern refers to</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Adventitious roots on rhizome</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Attachment of sori on leaf surface</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>System of leaf gaps in the steam</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Leaves are coiled when young</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-43">
+	<h2>Suberised cell/tissue is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Xylem</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Phloem</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Cork</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Sclerenchyma</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-44">
+	<h2>Largest flower in the world is that of</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Lotus</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Rafflesia</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Giant cactus</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Sunflower</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-45">
+	<h2>Pryamid of number is inverted for</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Tree ecosystem</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Forest ecosystem</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Grassland ecosystem</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Pond ecosystem</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-46">
+	<h2>If (3,3) lies on line joining points (h,0) and (0,k) then</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>h + k = 9</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1/h + 1/k = 1/3</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>hk = 3</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3h - 3k = 1</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-47">
+	<h2>THe gradient of one of the lines ax^2 + 2hxy + by^2 = 0 is twice that of other then</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>h^2 = ab</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>h = a + b</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>8h^2 = 9ab</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>9h^2 = 8ab</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-48">
+	<h2>The equation of tangent to the circle x^2 + y^2 + 4x - 6y - 13 = 0 at point (3,4) is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3x + 4y = 17</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>5x + y = 19</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2x - 7y = 9</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>5x + 3y = 1</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-49">
+	<h2>If the vector i - j, j + k and a form a triangle then a is equal to</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2i - j + k</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>i + k</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>j - 2k</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>-i - k</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-50">
+	<h2>The vector making an angle 45o with x-axis and having magnitude 2 \sqrt{2} is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(2,3)</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(2,4)</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(2,2)</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(3,2)</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-51">
+	<h2>If A and B are two disjoint sets then $(B \cap \overline{A})$ is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$B \cup A$</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$B - A$</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$B$</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$A - B$</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-52">
+	<h2>The range of function f(x) = \sqrt{4 - x^2} is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>[-2,1]</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>[-2,3]</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>[0,2]</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>[0,1]</p>
+	</label>	
+	<div id="correctoption"></div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-53">
+	<h2>The value of sin pi/10 + sin 13pi/10 =</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>-1/2</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1/2</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>\sqrt{3}/2</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-54">
+	<h2>In any triangle maximum value of cosA + cosB + cosC is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1/2</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>0</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3/2</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-55">
+	<h2>If sin \theta + cos \theta = 1, then the value of sin 2\theta is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>0</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>-1</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-56">
+	<h2>If $left [ \displaylines{ 1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6} \right ] \left [ \displaylines{x \\ y \\ z} \right ] \ = \ \left [ \displaylines{ 3 \\ 6 \\ 10 } \right ]$ then, $\left [ \displaylines{ x \\ y \\ z } \right ] \ = \$</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$\left [ \displaylines{ 2 \\ 4 \\ 6 } \right ]$</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$\left [ \displaylines{ 1 \\ 2 \\ 3 } \right ] \ = \$</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$\left [ \displaylines{ 1 \\ 1 \\ 1 } \right ]</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>$\left [ \displaylines{ 3 \\ 2 \\ 1 } \right ]</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-57">
+	<h2>If M_{ij} is the minor of element in the i^{th} row and j^{th} column of a matrix, its cofactor (A_{ij}) is given by</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(1)^{i+j} M_{ij}</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(1)^{i-j} M_{ij}</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(-1)^{i+j} M_{ij}</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(-1)^{i-j} M_{ij}</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-58">
+	<h2>The sum of the 1st ten terms of an AP whose 1st term is 5 and common difference 4 is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>230</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>420</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>140</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>270</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-59">
+	<h2>If a1 = 2 and an = a(n-1) - 1, then a3 is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>0</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-60">
+	<h2>The reaminder when x^100 + x^164 + 1 is divided by x - 1 is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-61">
+	<h2>In the equation x^2 + (k+2)x + 2k = 0 has equal roots, then  k =</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>-6</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>8</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-62">
+	<h2>How many pupils can be seated in a room with 's' single seats and 'd' double seats?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>sd</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2sd</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2(s+d)</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2d+s</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-63">
+	<h2>If x^a = y^b = z^c and y = xz, then the value of 1/a + 1/b + 1/c is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2b</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>b/2</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2/b</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>b</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-64">
+	<h2>Price of a gas was first increased by 10% and then decreased by 10%. What is total change in price of gas?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>0%</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>1%</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>2%</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>4%</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-65">
+	<h2>In a race of 1km, A beats B by 20m and B beats C by 50m, by how much does A beat C?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>70m</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>69m</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>68m</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>67m</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+
+<div class="mcqs" id="mcq-66">
+	<h2>A milk man purhcases 30 litres of milk which contains milk and water in the ratio 7:3. How much water should be added to make the ration 3:7?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>30 litres</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>35 litres</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>40 litres</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>45 litres</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-67">
+	<h2>If Rs. 450 amounts to Rs. 540 in 4 years, what sum will amount to Rs. 637.50 in 5 years?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Rs 500</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Rs 510</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Rs 520</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Rs 540</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-68">
+	<h2>One side of rectangle is x inces. If the perimeter be P, what is the length of other side?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>P - x</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>P/2 - x</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>P - 2x</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>(P - 2x)/P</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-69">
+	<h2>If \overline{X} =  29.5, \sum fx = 25a + 1620 and N = a + 54, a =</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>3</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>6</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>7</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>5</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-70">
+	<h2>In the figure, which of the following must be true?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>x + y = z + r</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>x + r = z - y</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>x - y = r + z</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>x - r = y - z</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-71">
+	<h2>Ruled by one's wife</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>cock-pecked</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>hen-pecked</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>pig-pecked</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>wifious</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-72">
+	<h2>Nothing but trees ___ seen.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>have</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>are</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>is</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>All of the above</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-73">
+	<h2>He prefers going to school ___ foot.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>on</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>by</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>from</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>with</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+
+<div class="mcqs" id="mcq-74">
+	<h2>Choose the correct antonym of 'candid'</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>frank</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>calm</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>unfair</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>sensible</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-75">
+	<h2>Choose the gramatically incorrect part: <p>He is one of those brave <i>men</i>(A) who <i>are</i> (B) never <i>afraid of</i>(C)  death. <i>No error</i>(D)</p></h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span><p>A</p> 			
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>B</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>D</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-76">
+	<h2>He is <i>hard-up</i> these days.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>hard-pressed</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>in trouble</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>short of money</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>disciplined</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-77">
+	<h2>The word 'cache' means</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>simple</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a building</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a hiding place</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>railway station</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-78">
+	<h2>Forensic examination of a dead body</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>diagnosis</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>post-mortem</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>analysis</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>dialysis</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-79">
+	<h2>The Alpha and Omegha</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>the beginning and the end</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a Greek song</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a Swiss watch</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a beautiful object</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-80">
+	<h2>I hate sitting ___ him as he always smells garlic.</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>besides</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>above</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>at</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>beside</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-81">
+	<h2>What is on ___ television tonight?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>a</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>an</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>the</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>none</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-82">
+	<h2>A person who is fond of fighting</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>bellicose</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>quarrelsome</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>jingoist</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>garrulouse</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-83">
+	<h2></h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p></p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p></p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p></p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p></p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-84">
+	<h2>Fact is often sronger than</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>fancy</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>fiction</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>imagination</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>dream</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-85">
+	<h2>At first blush</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>at first sight</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>in the beginning</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>initiation</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>in day</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-86">
+	<h2>The plural of cargo is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>cargoes</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>cargos</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>cargoise</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>cargo</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-87">
+	<h2>Complete the proverb:<br>"Absence makes the heat grow ___".</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>stronger</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>fast</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>larger</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>fonder</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-88">
+	<h2>You are required to rearrange these parts which are labeled P, Q, R and S to produce the correct sentence. Choose the correct sentence.<br>P: I decided to call on him.<br>Q: at the earliest opportunity<br>R: having heard of the plamist<br>S: before I came into town</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>RSPQ</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>PQRS</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>SQPR</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>QPRS</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-89">
+	<h2>Choose the oldd man out</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A chain of mountains</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A choir of singers</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A constellation of stars</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>A crew of lectures</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-90">
+	<h2>Hater of alcholic drinks is - Teetotaller</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hater of knowledge is - Misanthrope</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hater of war is - Austere</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hater of marriage is - celebate</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Hater of worldly life is - misologist</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-91">
+	<h2>Who is known as the Prince of Mathematics?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Lenhard Euler</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>LEJ Brouwer</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Karl Guass</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Pythagorus</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-92">
+	<h2>Which of the following is not an acronym?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>PEN</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>BASIC</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>LASER</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>IMF</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-93">
+	<h2>The largest state of USA is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>California</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Montana</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>New Mexico</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Alaska</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-94">
+	<h2>The currency of Germany is</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Deutschmark</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Dollar</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Lira</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Peso</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-95">
+	<h2>Which combination of letters completes the given series<br>NRJ, PNP, RJV, ___</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>BFT</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>TFB</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>TBF</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>BTF</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-96">
+	<h2>Pointing to a man, a woman said, "He is the only son of my mother's mother." How is the woman related to the man?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Aunt</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Daughter</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Niece</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Sister</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-97">
+	<h2>In a beehive, the number of bees doubles every day that of previous day. In being so, the number of bees on 30th day is 1 lakh. On which day the number of bees was 50 thousand?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>15th</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>14th</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>16th</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>29th</p>
+	</label>	
+	<div id="correctoption">opt4</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-98">
+	<h2>What is the missing letter?<table><tr><td>E</td><td>C</td><td>O</td></tr><tr><td>B</td><td>A</td><td>B</td></tr><tr><td>G</td><td>B</td><td>N</td></tr><tr><td>D</td><td>B</td><td>?</td></tr></table></h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>F</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>H</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>G</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>C</p>
+	</label>	
+	<div id="correctoption">opt2</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-99">
+	<h2>If "+" means "divide, "x" means "-", "divide" means "+" and "-" means "x", then 16 divide 8 x 6 - 2 + 12 = ?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>22</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>25</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>23</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>30</p>
+	</label>	
+	<div id="correctoption">opt3</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+<hr>
+<div class="mcqs" id="mcq-100">
+	<h2>Which of the following birds can fly?</h2>
+	<label id="opt1">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Puffin</p>
+	</label>	
+	<label id="opt2">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Emu</p>
+	</label>	
+	<label id="opt3">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Ostrich</p>
+	</label>	
+	<label id="opt4">
+		<input type="radio">
+  			<span class="option-box"></span>
+  			<p>Kiwi</p>
+	</label>	
+	<div id="correctoption">opt1</div>
+</div>
+<div class="showAnswer"><span>Explanation</span></div>
+</body>
+</html>

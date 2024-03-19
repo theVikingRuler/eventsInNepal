@@ -1,0 +1,124 @@
+.event-meta {
+	background-color: var(--color);
+	padding: 1px 20px 20px 20px;
+	border-radius: 5px;
+	box-shadow: 1px 1px var(--head-color);
+}
+
+#event-page-cost {
+	float: right;
+	background-color: yellow;
+	padding: 10px;
+	margin: 10px 0;
+	font-size: 20px;
+	border-radius: 5px;
+	color: var(--main-color);
+	font-weight: 600;
+	opacity: 0.9;
+	transition: 0.3s ease;
+}
+
+#event-page-cost:hover {
+	cursor: pointer;
+	opacity: 1.0;
+}
+
+#event-page-cost-free {
+	float: right;
+	background-color: green;
+	padding: 10px;
+	margin: 10px 0;
+	font-size: 20px;
+	border-radius: 5px;
+	font-weight: 600;
+}
+#event-page-date, #event-page-venue, #event-page-contact, #event-page-website {
+	padding: 0 0 2px 0;
+}
+
+#event-page-description-title, #event-page-highlights-title, #event-page-organizer-title, #event-page-images-title, #event-page-criteria-title, #event-page-attractions-title{
+	padding: 0 0 5px 5px;
+	border-left: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
+}
+
+#event-page-organizer-logo {
+	line-height: 100px;
+	vertical-align: middle;
+	padding: 25px 20px;
+}
+
+#event-page-organizer-name {
+	font-size: 20px;
+	padding: 20px 0 0 0;
+	font-weight: 800;
+}
+
+.event-page-organizer-card {
+	background-color: var(--secondary-color);
+	height: 100px;
+	width: 100%;
+	border-radius: 20px;
+}
+
+.image-slideshow {
+	border: 1px solid var(--font-color);
+	height: 400px;
+	width: 708px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image-slideshow-button {
+	float:  right;
+	position: relative;
+	bottom: 40px;
+	font-size: 16px;
+	margin-right: 5px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: none;
+	color: var(--main-color);
+	background-color: var(--font-color);
+}
+
+.image-slideshow-button-active {
+	border-style: dashed;
+	color: var(--font-color);
+	background-color: transparent;
+}
+
+.image-slideshow-button:hover {
+	cursor: pointer;
+	border-style: dashed;
+	color: var(--font-color);
+	background-color: transparent;
+}
+
+.event-page-highlights, .event-page-images, .event-page-description, .event-page-criteria, .event-page-organizer {
+	margin:  30px 0;
+}
+
+.event-page-highlights-card {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+	padding: 0 0 0 5px;
+	margin-bottom: 5px;
+	background-color: var(--tertiary-color);
+	border-radius: 5px;
+}
+
+/* W3 Schools */
+
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+
+.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3-display-container{position:relative}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
